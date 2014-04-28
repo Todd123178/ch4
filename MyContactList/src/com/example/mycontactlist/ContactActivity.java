@@ -3,10 +3,10 @@ package com.example.mycontactlist;
 import com.example.mycontactlist.DatePickerDialog.SaveDateListener;
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.ActionBarActivity;
+
 import android.text.format.DateFormat;
 import android.text.format.Time;
-import android.app.FragmentManager;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;

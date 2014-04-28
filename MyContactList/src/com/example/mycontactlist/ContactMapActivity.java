@@ -3,12 +3,14 @@ package com.example.mycontactlist;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.os.Build;
 
 public class ContactMapActivity extends ActionBarActivity {
@@ -17,6 +19,9 @@ public class ContactMapActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_contact_map);
+		initListButton();
+        initMapButton();        
+        initSetttingsButton();
 
 		
 	}
@@ -41,5 +46,32 @@ public class ContactMapActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-
+    private void initListButton(){
+    	ImageButton list=(ImageButton) findViewById(R.id.imageButtonList);
+    	list.setOnClickListener(new View.OnClickListener() {
+    		public void onClick(View V){
+    			Intent intent = new Intent(ContactMapActivity.this, ContactListActivity.class);
+    			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    			startActivity(intent);
+    		}
+			
+			
+		});
+    }
+    private void initMapButton(){
+    	ImageButton list=(ImageButton) findViewById(R.id.imageButtonMap);
+    	list.setEnabled(false);
+    }
+    private void initSetttingsButton(){
+    	ImageButton list=(ImageButton) findViewById(R.id.imageButtonSettings);
+    	list.setOnClickListener(new View.OnClickListener() {
+    		public void onClick(View V){
+    			Intent intent = new Intent(ContactMapActivity.this, ContactSettingsActivity.class);
+    			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    			startActivity(intent);
+    		}
+			
+			
+		});
+    }
 }
