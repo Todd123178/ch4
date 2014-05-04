@@ -162,7 +162,7 @@
         android:nextFocusDown="@+id/editZipcode">
       </EditText>
     <EditText
-        android:id="@+id/editZipCode"
+        android:id="@+id/editZipcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/editState"
